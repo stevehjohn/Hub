@@ -1,0 +1,74 @@
+﻿<UserControl xmlns:Controls="clr-namespace:MingControls.Controls;assembly=HubControls"  x:Class="MingMongoPlugin.TabDocuments.UserControls.SystemStatusControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:MingMongoPlugin.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Border Margin="0,5,5,0" Padding="2,2,2,2" BorderBrush="#cccedb" BorderThickness="2" Name="FilterBorder">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="0">
+                    <TextBlock Text="{x:Static resx:Resources.SystemOverview_Interval}" />
+                </Label>
+                <Slider Minimum="0" Maximum="4" VerticalAlignment="Center" TickFrequency="1" IsSnapToTickEnabled="True" Width="80" Name="Interval" Value="1" />
+                <Label Margin="0">
+                    <TextBlock Text="{x:Static resx:Resources.SystemOverview_Interval1}" Name="IntervalDesc" />
+                </Label>
+                <Label Margin="20,0,0,0">
+                    <TextBlock Text="{x:Static resx:Resources.SystemOverview_Span}" />
+                </Label>
+                <Slider Minimum="0" Maximum="3" VerticalAlignment="Center" TickFrequency="1" IsSnapToTickEnabled="True" Width="80" Name="Span" />
+                <Label Margin="0">
+                    <TextBlock Text="{x:Static resx:Resources.SystemOverview_Span0}" Name="SpanDesc" />
+                </Label>
+            </StackPanel>
+        </Border>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Controls:ScrollingLineChart Grid.Column="0" Margin="0,5,5,0" Name="NetworkInChart" />
+            <Controls:ScrollingLineChart Grid.Column="1" Margin="0,5,5,0" Name="MemoryChart" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Controls:ScrollingLineChart Grid.Column="0" Margin="0,5,5,0" Name="NetworkOutChart" />
+            <Controls:ScrollingLineChart Grid.Column="1" Margin="0,5,5,0" Name="ConnectionsChart" />
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Controls:ScrollingLineChart Grid.Column="0" Margin="0,5,5,0" Name="CurrentOpsChart" />
+            <Grid Grid.Column="1" Name="LockOptionsGrid" MouseEnter="LockOptionsGridMouseEnter" MouseLeave="LockOptionsGridMouseLeave" Margin="0,5,5,0" Background="Transparent">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Visibility="Collapsed" Name="LockOptionsPanel">
+                    <ComboBox Name="LockDatabases" Width="Auto" />
+                    <RadioButton Name="ReadLock" VerticalAlignment="Center" Margin="10,0,0,0">
+                        <TextBlock Text="{x:Static resx:Resources.ServerStatus_Read}" />
+                    </RadioButton>
+                    <RadioButton Name="WriteLock" IsChecked="True" VerticalAlignment="Center" Margin="10,0,0,0">
+                        <TextBlock Text="{x:Static resx:Resources.ServerStatus_Write}" />
+                    </RadioButton>
+                </StackPanel>
+                <Controls:ScrollingLineChart Grid.Row="1" Name="LocksChart" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

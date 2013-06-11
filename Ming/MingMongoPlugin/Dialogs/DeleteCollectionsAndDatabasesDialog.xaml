@@ -1,0 +1,55 @@
+﻿<Window x:Class="MingMongoPlugin.Dialogs.DeleteCollectionsAndDatabasesDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resx="clr-namespace:MingMongoPlugin.Properties"
+             xmlns:mmpd="clr-namespace:MingMongoPlugin.Dialogs"
+             Title="{x:Static resx:Resources.DeleteColsDBs_Title}" Width="400" Height="600"
+             Icon="../Resources/collections.png" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip" Background="#efeff2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TreeView Grid.Row="1" MinHeight="250" BorderThickness="0" Name="SourceTree" Margin="5,0,0,0">
+                    <TreeView.Resources>
+                        <Style TargetType="TreeViewItem">
+                            <Setter Property="IsExpanded" Value="{Binding IsExpanded}" />
+                        </Style>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#52b0ef" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="#cccedb" />
+                        <HierarchicalDataTemplate DataType="{x:Type mmpd:SourceTreeViewItem}" ItemsSource="{Binding Items}">
+                            <StackPanel Orientation="Horizontal" Margin="2,2,2,2" VerticalAlignment="Center" Name="TreeViewItem">
+                                <Image Source="{Binding Icon}" Width="20" Height="16" Margin="0,0,5,0" />
+                                <CheckBox IsChecked="{Binding Selected}" Padding="0,0,5,0" />
+                                <TextBlock Text="{Binding Text}" VerticalAlignment="Center" Padding="0,0,5,0"/>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.Resources>
+                </TreeView>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                <Button IsDefault="True" Margin="0,10,20,10" Padding="10,5,10,5" Name="CopyButton" >
+                    <TextBlock Text="{x:Static resx:Resources.DeleteColsDBs_DeleteButton}" />
+                </Button>
+                <Button IsCancel="True" Margin="0,10,5,10" Padding="10,5,10,5" Name="CancelButton" >
+                    <TextBlock Text="{x:Static resx:Resources.DeleteColsDBs_CancelButton}" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

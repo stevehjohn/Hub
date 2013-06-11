@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5EBF51F-5B50-4AC4-9FD8-B1C28C14284E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MingMongoPlugin</RootNamespace>
+    <AssemblyName>HubMongoPlugin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Ming\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Ming\bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.7.1.4791, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.7.1\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.1.4791, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.7.1\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusyStateChangedEventHandler.cs" />
+    <Compile Include="Controls\IndexControl.xaml.cs">
+      <DependentUpon>IndexControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IndexListControl.xaml.cs">
+      <DependentUpon>IndexListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\IndexDescriptor.cs" />
+    <Compile Include="DataObjects\ServerStatus.cs" />
+    <Compile Include="Dialogs\DeleteCollectionsAndDatabases.cs" />
+    <Compile Include="Dialogs\DeleteCollectionsAndDatabasesDialog.xaml.cs">
+      <DependentUpon>DeleteCollectionsAndDatabasesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ManageIndexes.cs" />
+    <Compile Include="Dialogs\ManageIndexesDialog.xaml.cs">
+      <DependentUpon>ManageIndexesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CopyCollections.cs" />
+    <Compile Include="Dialogs\CopyCollectionsDialog.xaml.cs">
+      <DependentUpon>CopyCollectionsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.cs" />
+    <Compile Include="MenuStateChangedEventHandler.cs" />
+    <Compile Include="MingMongoPlugin.cs" />
+    <Compile Include="MingTreeViewClient.cs" />
+    <Compile Include="MongoFunctions\CollectionDefinition.cs" />
+    <Compile Include="MongoFunctions\CopyCollectionDefinition.cs" />
+    <Compile Include="MongoFunctions\MongoOperations.cs" />
+    <Compile Include="MongoFunctions\MongoOperationsCompactCollections.cs" />
+    <Compile Include="MongoFunctions\MongoOperationsCopyCollection.cs" />
+    <Compile Include="MongoFunctions\MongoOperationsCopyCollections.cs" />
+    <Compile Include="MongoFunctions\MongoOperationsCreateIndexes.cs" />
+    <Compile Include="MongoReplicaSetMemberInfo.cs" />
+    <Compile Include="MongoUtilities.cs" />
+    <Compile Include="Mongo\CollectionPropertyAnalyser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TabDocuments\CollectionView.cs" />
+    <Compile Include="TabDocuments\EvaluateJavaScript.cs" />
+    <Compile Include="TabDocuments\LogWatch.cs" />
+    <Compile Include="TabDocuments\MongoConsole.cs" />
+    <Compile Include="TabDocuments\MongoConsole_OLD.cs" />
+    <Compile Include="TabDocuments\MongoDocumentProperty.cs" />
+    <Compile Include="TabDocuments\Pager.cs" />
+    <Compile Include="TabDocuments\SystemStatus.cs" />
+    <Compile Include="TabDocuments\UserControls\CollectionViewControl.xaml.cs">
+      <DependentUpon>CollectionViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabDocuments\UserControls\EvalJSControl.xaml.cs">
+      <DependentUpon>EvalJSControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabDocuments\UserControls\LogWatchControl.xaml.cs">
+      <DependentUpon>LogWatchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabDocuments\UserControls\MongoConsoleControl.xaml.cs">
+      <DependentUpon>MongoConsoleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TabDocuments\UserControls\SystemStatusControl.xaml.cs">
+      <DependentUpon>SystemStatusControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeViewObjects\CollectionIndexesEmptyNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionIndexNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionPropertiesNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionPropertyNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionsEmptyNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionsNode.cs" />
+    <Compile Include="TreeViewObjects\DatabaseNode.cs" />
+    <Compile Include="TreeViewObjects\CollectionIndexesNode.cs" />
+    <Compile Include="TreeViewObjects\DatabasesEmptyNode.cs" />
+    <Compile Include="TreeViewObjects\IMongoTreeViewObject.cs" />
+    <Compile Include="TreeViewObjects\ReplicaSetMemberNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MingControls\MingControls.csproj">
+      <Project>{4d687beb-dedb-41b3-897c-337181ddfb95}</Project>
+      <Name>MingControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MingPluginInterfaces\MingPluginInterfaces.csproj">
+      <Project>{E26501F8-6831-4128-933D-13ED026CC393}</Project>
+      <Name>MingPluginInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mongo-treeview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collections.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\indexes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collection_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\database_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\view.png" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\IndexControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\IndexListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\DeleteCollectionsAndDatabasesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ManageIndexesDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dialogs\CopyCollectionsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabDocuments\UserControls\CollectionViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabDocuments\UserControls\EvalJSControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabDocuments\UserControls\LogWatchControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabDocuments\UserControls\MongoConsoleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TabDocuments\UserControls\SystemStatusControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\columns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collection_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\database_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\document_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\document_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\primary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\secondary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\arbiter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collection_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\database_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collections_compact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\database_collection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\console.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\server_status.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Ming.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <userSettings>
+        <Ming.Properties.Settings>
+            <setting name="Connections" serializeAs="Xml">
+                <value>
+                    <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+                </value>
+            </setting>
+            <setting name="WindowState" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="WindowPosition" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="TreeWidth" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="LastVersionRun" serializeAs="String">
+                <value />
+            </setting>
+        </Ming.Properties.Settings>
+    </userSettings>
+</configuration>

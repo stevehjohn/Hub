@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000" />
+    <meta http-equiv="content-language" content="en-GB" />
+    <meta name="description" content="Hub for MongoDB. The front end for MongoDB." />
+    <meta property="og:title" content="Hub for MongoDB" />
+    <meta property="og:description" content="The front end for MongoDB." 
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.outsidecontextproblem.com" />
+    <meta property="og:image" content="http://www.outsidecontextproblem.com/hub.png" />
+    <meta property="og:site_name" content="outside.context.problem" />
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <title>Outside Context Problem</title>
+    @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>*@
+    @Styles.Render("~/Content/css")
+</head>
+@{
+    var baseModel = Model as OCP.Models.ModelBase;
+}
+<body>
+    <div class="header">
+        <div class="content_block">
+            <a href="/" class="title">outside.context.problem</a>
+            <ul>
+                <li @(baseModel.SelectedPage == "software" ? Html.Raw("class=\"selected\"") : Html.Raw(""))><a href="/">hub</a></li>
+                <li @(baseModel.SelectedPage == "purchase" ? Html.Raw("class=\"selected\"") : Html.Raw(""))><a href="/purchase">purchase</a></li>
+                <li @(baseModel.SelectedPage == "contact" ? Html.Raw("class=\"selected\"") : Html.Raw(""))><a href="/contact">contact</a></li>
+            </ul>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="body_content">
+        <div class="headline">
+            @if (! baseModel.HideHeadline)
+            {
+            <div class="content_block">
+                <div class="headline_left">
+                    <h1>Hub for MongoDB</h1>
+                    <p>
+                        A management studio for your MongoDB cluster
+                    </p>
+                </div>
+                <div class="app_image"></div>
+                <div style="clear: both;"></div>
+            </div>
+            }
+        </div>
+        @RenderBody()
+    </div>
+</body>
+</html>

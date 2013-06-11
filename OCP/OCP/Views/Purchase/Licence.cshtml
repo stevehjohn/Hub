@@ -1,0 +1,19 @@
+﻿@using OCP.Infrastructure
+@model OCP.Models.LicenceModel
+<div class="main_content">
+    <div class="content_block">
+        <div class="content_full">
+            <h1>Thank You</h1>
+            <p>Thank you for purchasing Hub.</p>
+            <p>Your licence code is below and has also been emailed to you. You can now activate Hub online using just your email address.</p>
+            <div class="column">
+                <div>Copies</div>
+                <div>Licence Code</div>
+            </div>
+            <div class="column">
+                <div>@Model.NoOfLicences</div>
+                <div style="font-family: Consolas, 'Lucida Console', monospace;">@Html.Raw(Model.LicenceCode.SplitLongString(70, "<br />"))</div>
+            </div>
+        </div>
+    </div>
+</div>

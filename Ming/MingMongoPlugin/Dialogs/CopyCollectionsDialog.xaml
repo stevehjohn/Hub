@@ -1,0 +1,126 @@
+﻿<Window x:Class="MingMongoPlugin.Dialogs.CopyCollectionsDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resx="clr-namespace:MingMongoPlugin.Properties"
+             xmlns:mmpd="clr-namespace:MingMongoPlugin.Dialogs"
+             Title="{x:Static resx:Resources.CopyCollections_Title}" Width="800" Height="600"
+             Icon="../Resources/collections.png" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip" Background="#efeff2">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Name="MainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"  Margin="5,5,5,5" Padding="2,2,2,2" BorderBrush="#cccedb" BorderThickness="2">
+                    <StackPanel Orientation="Horizontal">
+                        <Label>
+                            <TextBlock Text="{x:Static resx:Resources.CopyCollections_Source}" />
+                        </Label>
+                        <Label>
+                            <TextBlock Text="" Name="SourceServer" />
+                        </Label>
+                    </StackPanel>
+                </Border>
+                <TreeView Grid.Row="1" MinHeight="250" BorderThickness="0" Name="SourceTree" Margin="5,0,0,0">
+                    <TreeView.Resources>
+                        <Style TargetType="TreeViewItem">
+                            <Setter Property="IsExpanded" Value="{Binding IsExpanded}" />
+                        </Style>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#52b0ef" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="#cccedb" />
+                        <HierarchicalDataTemplate DataType="{x:Type mmpd:SourceTreeViewItem}" ItemsSource="{Binding Items}">
+                            <StackPanel Orientation="Horizontal" Margin="2,2,2,2" VerticalAlignment="Center" Name="TreeViewItem">
+                                <Image Source="{Binding Icon}" Width="20" Height="16" Margin="0,0,5,0" />
+                                <CheckBox IsChecked="{Binding Selected}" Padding="0,0,5,0" />
+                                <TextBlock Text="{Binding Text}" VerticalAlignment="Center" Padding="0,0,5,0"/>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.Resources>
+                </TreeView>
+            </Grid>
+            <GridSplitter Width="5" Margin="0" />
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"  Margin="0,5,5,5" Padding="2,2,2,2" BorderBrush="#cccedb" BorderThickness="2">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="0,0,10,0">
+                            <TextBlock Text="{x:Static resx:Resources.CopyCollections_Target}" />
+                        </Label>
+                        <ComboBox Name="TargetServer" MinWidth="150" DisplayMemberPath="Description" Padding="3,5,3,3">
+                        </ComboBox>
+                    </StackPanel>
+                </Border>
+                <ListView Grid.Row="1" BorderThickness="0" Margin="0,0,5,0" MinWidth="350" Name="TargetCollections">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                <GridViewColumn>
+                                    <GridViewColumnHeader Padding="5,0,15,0">
+                                        <TextBlock Text="{x:Static resx:Resources.CopyCollections_SourceCollection}" />
+                                    </GridViewColumnHeader>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding SourceCollection}" ToolTip="{Binding SourceCollectionFullName}" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn>
+                                    <GridViewColumnHeader Padding="5,0,15,0">
+                                        <TextBlock Text="{x:Static resx:Resources.CopyCollections_TargetDatabase}" />
+                                    </GridViewColumnHeader>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <ComboBox IsEditable="True" ItemsSource="{Binding TargetDatabases}" Text="{Binding TargetDatabase}" LostFocus="TargetDatabaseComboLostFocus" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn>
+                                    <GridViewColumnHeader Padding="5,0,15,0">
+                                        <TextBlock Text="{x:Static resx:Resources.CopyCollections_NewCollection}" />
+                                    </GridViewColumnHeader>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Text="{Binding NewCollectionName}" BorderThickness="0" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="" VerticalAlignment="Center" Padding="5,0,0,0" Name="Status" />
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                <Button IsDefault="True" Margin="0,10,20,10" Padding="10,5,10,5" Name="CopyButton" >
+                    <TextBlock Text="{x:Static resx:Resources.CopyCollections_CopyButton}" />
+                </Button>
+                <Button IsCancel="True" Margin="0,10,5,10" Padding="10,5,10,5" Name="CancelButton" >
+                    <TextBlock Text="{x:Static resx:Resources.CopyCollections_CancelButton}" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

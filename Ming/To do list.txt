@@ -1,0 +1,38 @@
+Before Release:
+- Mechanism to handle scenario where connection credentials aren't available - Ming should ask for them and store for the session
+- Licensing - especially trial version (maybe no need to be heavy handed on licensed copies being oversubscribed)
+
+- Send close message to all tab documents when app closed (e.g. so console processes are terminated)
+
+- Website to email notifications when feedback is sent
+
+
+Other To Do:
+
+- Tab, up and down arrows to move between editable properties on collection view
+- Backup/Restore. db.fsyncLock(), copy data files, db.fsyncUnlock(). How to copy the files from a remote machine?
+
+In Progress:
+- Show Mongo statistics
+  - Add detail view - collection sizes and locks?
+  - Select which memory chart to view?
+  - Filter the operations chart?
+- CnnInfo to provide friendly name method which uses the friendly name or host:port is no friendly name set. Tab titles shoud use this.
+
+TEST EVERYTHING!
+
+Low priority:
+- Automatically remove successful items from the operation list (after a configurable period)
+- Rename document properties?
+- Make copy collection more efficient?
+- Refresh treeview after copying collections (or copying each collection). Or, any background operation which can effect the treeview.
+- Options dialog (with plugins)
+- Copy document
+- Delete document property
+- Add document property
+
+Difficult:
+- Embedded console? (see http://www.codeproject.com/Articles/335909/Embedding-a-Console-in-a-C-Application)
+
+Other ideas:
+- Import/export

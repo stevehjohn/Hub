@@ -1,0 +1,61 @@
+﻿<Window x:Class="MingMongoPlugin.Dialogs.ManageIndexesDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:resx="clr-namespace:MingMongoPlugin.Properties"
+             xmlns:mmpd="clr-namespace:MingMongoPlugin.Dialogs"
+             xmlns:ctrl="clr-namespace:MingMongoPlugin.Controls"
+             Title="{x:Static resx:Resources.ManageIndexes_Title}" Width="600" Height="600"
+             Icon="../Resources/indexes.png" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip" Background="#efeff2">
+    <Window.Resources>
+        <Style x:Key="CollapsedHeader" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <ListView Grid.Column="0" BorderThickness="0" Margin="0,0,5,0" Name="AvailableProperties" AllowDrop="True">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView ColumnHeaderContainerStyle="{StaticResource CollapsedHeader}">
+                        <GridView.Columns>
+                            <GridViewColumn>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}" Cursor="SizeAll" MouseDown="PropertyMouseDown" MouseMove="PropertyMouseMove" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ctrl:IndexListControl Grid.Column="1" x:Name="IndexList" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right">
+                <Button IsDefault="True" Margin="0,10,20,10" Padding="10,5,10,5" Name="SaveButton" >
+                    <TextBlock Text="{x:Static resx:Resources.ManageIndexes_SaveButton}" />
+                </Button>
+                <Button IsCancel="True" Margin="0,10,5,10" Padding="10,5,10,5" Name="CancelButton" >
+                    <TextBlock Text="{x:Static resx:Resources.ManageIndexes_CancelButton}" />
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

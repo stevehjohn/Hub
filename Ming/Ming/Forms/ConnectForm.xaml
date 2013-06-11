@@ -1,0 +1,81 @@
+﻿<Window x:Class="Ming.Forms.ConnectForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:resx="clr-namespace:Ming.Properties"
+        xmlns:vm="clr-namespace:Ming.ViewModels"
+        Title="{x:Static resx:Resources.Connect_Title}" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False"
+        Icon="/Resources/server_add.png" FocusManager.FocusedElement="{Binding ElementName=Service}">
+    <Window.DataContext>
+        <vm:ConnectViewModel />
+    </Window.DataContext>
+    <Grid Margin="10,10,10,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Service}"></TextBlock>
+        </Label>
+        <Label Grid.Column="0" Grid.Row="1" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Name}"></TextBlock>
+        </Label>
+        <Label Grid.Column="0" Grid.Row="2" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Host}"></TextBlock>
+        </Label>
+        <Label Grid.Column="0" Grid.Row="3" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Port}"></TextBlock>
+        </Label>
+        <Label Grid.Column="0" Grid.Row="4" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Username}"></TextBlock>
+        </Label>
+        <Label Grid.Column="0" Grid.Row="5" Style="{StaticResource FormLabel}">
+            <TextBlock Text="{x:Static resx:Resources.Connect_Password}"></TextBlock>
+        </Label>
+        <ComboBox Grid.Column="1" Grid.Row="0" Name="Service" Margin="0,5,0,5" Width="200"
+                  ItemsSource="{Binding PlugIns}" DisplayMemberPath="Name"
+                  SelectedItem="{Binding Service}">
+        </ComboBox>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="0,5,0,5" Width="200">
+            <Binding Path="Name" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" />
+        </TextBox>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="0,5,0,5" Width="200">
+            <Binding Path="Host" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" />
+        </TextBox>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="0,5,0,5" Width="200">
+            <Binding Path="Port" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" />
+        </TextBox>
+        <TextBox Grid.Column="1" Grid.Row="4" Margin="0,5,0,5" Width="200">
+            <Binding Path="Username" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" />
+        </TextBox>
+        <PasswordBox Grid.Column="1" Grid.Row="5" Margin="0,5,0,5" Name="Password" Width="200" />
+        <Grid Grid.Row="6" Grid.ColumnSpan="2" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Command="{Binding TestConnectionCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Resources/warning.png" Margin="0,0,10,0" Name="TestStatusImage" />
+                    <TextBlock Text="{x:Static resx:Resources.Connect_TestButton}"></TextBlock>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Command="{Binding AddConnectionCommand}" IsDefault="True">
+                <TextBlock Text="{x:Static resx:Resources.Connect_AddButton}"></TextBlock>
+            </Button>
+            <Button Grid.Column="3" IsCancel="True">
+                <TextBlock Text="{x:Static resx:Resources.Connect_CancelButton}"></TextBlock>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

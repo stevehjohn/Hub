@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mongo_treeview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mongo-treeview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PluginTitle" xml:space="preserve">
+    <value>MongoDB</value>
+  </data>
+  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_NoDatabases" xml:space="preserve">
+    <value>No Databases</value>
+  </data>
+  <data name="collection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collections" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_Collections" xml:space="preserve">
+    <value>Collections</value>
+  </data>
+  <data name="TreeView_NoCollections" xml:space="preserve">
+    <value>No Collections</value>
+  </data>
+  <data name="TreeView_Indexes" xml:space="preserve">
+    <value>Indexes</value>
+  </data>
+  <data name="TreeView_NoIndexes" xml:space="preserve">
+    <value>No Indexes</value>
+  </data>
+  <data name="index" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\index.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="indexes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\indexes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_ConnectionFailure" xml:space="preserve">
+    <value>Unable to Connect</value>
+  </data>
+  <data name="MenuItem_AddCollection" xml:space="preserve">
+    <value>Add _Collection...</value>
+  </data>
+  <data name="collection_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collection_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Data" xml:space="preserve">
+    <value>_Mongo</value>
+  </data>
+  <data name="MenuItem_AddDatabase" xml:space="preserve">
+    <value>Add _Database...</value>
+  </data>
+  <data name="MenuItem_ViewData" xml:space="preserve">
+    <value>_View Collection</value>
+  </data>
+  <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_Header_Property" xml:space="preserve">
+    <value>Property</value>
+  </data>
+  <data name="CollectionView_Header_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="CollectionView_Header_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="CollectionView_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_Documents" xml:space="preserve">
+    <value>Documents:</value>
+  </data>
+  <data name="CollectionView_Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="CollectionView_Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="CollectionView_PageSize" xml:space="preserve">
+    <value>Items per page</value>
+  </data>
+  <data name="CollectionView_Flat" xml:space="preserve">
+    <value>View flattened</value>
+  </data>
+  <data name="CollectionView_Hierarchy" xml:space="preserve">
+    <value>View as hierarchy</value>
+  </data>
+  <data name="columns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\columns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_Next" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="CollectionView_Previous" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="CollectionView_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="arrow_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_Asc" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="CollectionView_Desc" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="arrow_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_Sort" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_AddSort" xml:space="preserve">
+    <value>Add to sorted properties</value>
+  </data>
+  <data name="CollectionView_HideSort" xml:space="preserve">
+    <value>Hide sorting panel</value>
+  </data>
+  <data name="CollectionView_ShowSort" xml:space="preserve">
+    <value>Show sorting panel</value>
+  </data>
+  <data name="TreeView_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="CollectionView_Filter" xml:space="preserve">
+    <value>Filter by</value>
+  </data>
+  <data name="CollectionView_AddFilter" xml:space="preserve">
+    <value>Add to filtered properties</value>
+  </data>
+  <data name="filter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\filter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CollectionView_HideFilter" xml:space="preserve">
+    <value>Hide filter panel</value>
+  </data>
+  <data name="CollectionView_ShowFilter" xml:space="preserve">
+    <value>Show filter panel</value>
+  </data>
+  <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="collection_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collection_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_DeleteCollection" xml:space="preserve">
+    <value>Delete Collection...</value>
+  </data>
+  <data name="MenuItem_DeleteDatabase" xml:space="preserve">
+    <value>Delete Database...</value>
+  </data>
+  <data name="PluginDescription" xml:space="preserve">
+    <value>MongoDB Plugin</value>
+  </data>
+  <data name="MenuItem_CopyDocument" xml:space="preserve">
+    <value>Copy Document</value>
+  </data>
+  <data name="Confirm_DeleteCollection" xml:space="preserve">
+    <value>Are you sure you want to delete the collection '{0}'?</value>
+  </data>
+  <data name="Confirm_DeleteDatabase" xml:space="preserve">
+    <value>Are you sure you want to delete the database '{0}'?</value>
+  </data>
+  <data name="primary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\primary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="secondary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\secondary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_RenameCollection" xml:space="preserve">
+    <value>Rename Collection...</value>
+  </data>
+  <data name="RenameCollection_Prompt" xml:space="preserve">
+    <value>Enter the new name for the collection</value>
+  </data>
+  <data name="RenameCollection_Title" xml:space="preserve">
+    <value>Rename Collection</value>
+  </data>
+  <data name="arbiter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arbiter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Renaming_Description" xml:space="preserve">
+    <value>Renaming {0} to {1}</value>
+  </data>
+  <data name="Renaming_Title" xml:space="preserve">
+    <value>Renaming {0}</value>
+  </data>
+  <data name="Renaming_CollectionExists" xml:space="preserve">
+    <value>The collection {0} already exists</value>
+  </data>
+  <data name="Renaming_GenericError" xml:space="preserve">
+    <value>An error occurred renaming the collection. {0}</value>
+  </data>
+  <data name="Renaming_InvalidName" xml:space="preserve">
+    <value>{0} is not a valid collection name</value>
+  </data>
+  <data name="Renaming_NotMaster" xml:space="preserve">
+    <value>{0}:{1} is not the primary node</value>
+  </data>
+  <data name="script" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\script.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_EvalJS" xml:space="preserve">
+    <value>Evaluate JavaScript</value>
+  </data>
+  <data name="CreateCollection_Prompt" xml:space="preserve">
+    <value>Enter the name for the new collection</value>
+  </data>
+  <data name="CreateCollection_Title" xml:space="preserve">
+    <value>Create Collection</value>
+  </data>
+  <data name="CreateCollection_OperationTitle" xml:space="preserve">
+    <value>Creating collection {0}</value>
+  </data>
+  <data name="CreateDatabase_Prompt" xml:space="preserve">
+    <value>Enter the name for the new database</value>
+  </data>
+  <data name="CreateDatabase_Title" xml:space="preserve">
+    <value>Create Database</value>
+  </data>
+  <data name="Status_Deleting" xml:space="preserve">
+    <value>Deleting...</value>
+  </data>
+  <data name="CreateDatabase_Exists" xml:space="preserve">
+    <value>The database {0} already exists</value>
+  </data>
+  <data name="CreateDatabase_InvalidName" xml:space="preserve">
+    <value>{0} is not a valid database name</value>
+  </data>
+  <data name="CreateDatabase_OperationTitle" xml:space="preserve">
+    <value>Creating database {0}</value>
+  </data>
+  <data name="CollectionView_Title" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="CollectionView_Description" xml:space="preserve">
+    <value>Collection View {0}:{1}/{2}.{3}</value>
+  </data>
+  <data name="EvaluateJS_Description" xml:space="preserve">
+    <value>Evaluate JavaScript {0}:{1}/{2}</value>
+  </data>
+  <data name="EvaluateJS_Evaluate" xml:space="preserve">
+    <value>Execute [Alt + Enter]</value>
+  </data>
+  <data name="EvaluateJS_Title" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EvaluateJS_Evaluating" xml:space="preserve">
+    <value>Evaluating...</value>
+  </data>
+  <data name="collection_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collection_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_CopyCollection" xml:space="preserve">
+    <value>Copy Collection...</value>
+  </data>
+  <data name="database_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_CopyDatabase" xml:space="preserve">
+    <value>Copy Database...</value>
+  </data>
+  <data name="MenuItem_RenameDatabase" xml:space="preserve">
+    <value>Rename Database...</value>
+  </data>
+  <data name="collections_compact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\collections_compact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_CompactCollections" xml:space="preserve">
+    <value>Compact All Collections...</value>
+  </data>
+  <data name="CompactCollections_Confirm" xml:space="preserve">
+    <value>WARNING: This command obtains a write lock on the affected database and will block other operations until it has completed.\n\n\nAre you sure you want to compact all the collections in the database {0}?</value>
+  </data>
+  <data name="CompactCollections_ConfirmAll" xml:space="preserve">
+    <value>WARNING: This command obtains a write lock on the affected database and will block other operations until it has completed.\n\n\nAre you sure you want to compact all the collections in the server {0}:{1}?</value>
+  </data>
+  <data name="CompactCollections_DescCompacting" xml:space="preserve">
+    <value>Compacting collection {0}.{1}</value>
+  </data>
+  <data name="CompactCollections_DescComplete" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="CompactCollections_DescCounting" xml:space="preserve">
+    <value>Counting collections</value>
+  </data>
+  <data name="CompactCollections_Error" xml:space="preserve">
+    <value>An error occurred compacting the collection. {0}</value>
+  </data>
+  <data name="CompactCollections_Title" xml:space="preserve">
+    <value>Compacting Collections</value>
+  </data>
+  <data name="CopyCollection_Copying" xml:space="preserve">
+    <value>Copied {0} documents</value>
+  </data>
+  <data name="CopyCollection_Counting" xml:space="preserve">
+    <value>Getting document count</value>
+  </data>
+  <data name="CopyCollection_Exists" xml:space="preserve">
+    <value>The collection {0} already exists</value>
+  </data>
+  <data name="CopyCollection_OpTitle" xml:space="preserve">
+    <value>Copying Collection</value>
+  </data>
+  <data name="CopyCollection_Prompt" xml:space="preserve">
+    <value>Enter a name for the new collection</value>
+  </data>
+  <data name="CopyCollection_Title" xml:space="preserve">
+    <value>Copy Collection</value>
+  </data>
+  <data name="CopyCollections_Error" xml:space="preserve">
+    <value>An error occurred copying the collection. {0}</value>
+  </data>
+  <data name="MenuItem_DeleteDocument" xml:space="preserve">
+    <value>Delete Document</value>
+  </data>
+  <data name="DeleteDocument_Deleting" xml:space="preserve">
+    <value>Deleting document...</value>
+  </data>
+  <data name="log" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\log.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_WatchLogs" xml:space="preserve">
+    <value>Watch Logs</value>
+  </data>
+  <data name="LogWatch_Log" xml:space="preserve">
+    <value>Log to view</value>
+  </data>
+  <data name="LogWatch_Description" xml:space="preserve">
+    <value>Log Watch {0}:{1}</value>
+  </data>
+  <data name="LogWatch_Title" xml:space="preserve">
+    <value>{0}:{1}</value>
+  </data>
+  <data name="LogWatch_High" xml:space="preserve">
+    <value>(highest)</value>
+  </data>
+  <data name="LogWatch_Low" xml:space="preserve">
+    <value>(lowest)</value>
+  </data>
+  <data name="LogWatch_Verbosity" xml:space="preserve">
+    <value>Verbosity</value>
+  </data>
+  <data name="pause" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pause.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogWatch_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="LogWatch_Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="CopyCollections_Title" xml:space="preserve">
+    <value>Copy Collections</value>
+  </data>
+  <data name="database_collection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_collection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuItem_CopyCollections" xml:space="preserve">
+    <value>Copy Collections...</value>
+  </data>
+  <data name="CopyCollections_Source" xml:space="preserve">
+    <value>Source:</value>
+  </data>
+  <data name="CopyCollections_Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="CopyCollections_NewCollection" xml:space="preserve">
+    <value>New Collection Name</value>
+  </data>
+  <data name="CopyCollections_SourceCollection" xml:space="preserve">
+    <value>Source Collection</value>
+  </data>
+  <data name="CopyCollections_TargetDatabase" xml:space="preserve">
+    <value>Target Database</value>
+  </data>
+  <data name="CopyCollections_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CopyCollections_CopyButton" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="CopyCollections_PrepareTitle" xml:space="preserve">
+    <value>Preparing to Copy...</value>
+  </data>
+  <data name="CopyCollections_LoadingCollections" xml:space="preserve">
+    <value>Loading available collections...</value>
+  </data>
+  <data name="CopyCollections_LoadingTargets" xml:space="preserve">
+    <value>Loading target databases...</value>
+  </data>
+  <data name="CopyCollections_TargetError" xml:space="preserve">
+    <value>Please ensure all target databases and collection names are set</value>
+  </data>
+  <data name="CopyCollections_ErrorMessageTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="CopyCollections_NoneSelected" xml:space="preserve">
+    <value>You have not selected any collections to copy</value>
+  </data>
+  <data name="CopyCollections_TargetsExists" xml:space="preserve">
+    <value>The following collections exist on the target server:\n\n\n{0}\n\nChange the new collection names or delete these collections before proceeding.</value>
+  </data>
+  <data name="CopyCollections_InvalidNames" xml:space="preserve">
+    <value>The following database or collection names are not valid:\n\n\n{0}\n\nPlease correct these before proceeding.</value>
+  </data>
+  <data name="CopyingCollections_Complete" xml:space="preserve">
+    <value>Copied {0} collection(s): {1} document(s) in total</value>
+  </data>
+  <data name="CopyingCollections_Copying" xml:space="preserve">
+    <value>Copying collection {0}.{1} to {2}.{3}: {4} document(s) copied</value>
+  </data>
+  <data name="CopyingCollections_Counting" xml:space="preserve">
+    <value>Getting document count</value>
+  </data>
+  <data name="CopyingCollections_CreatingIndexes" xml:space="preserve">
+    <value>Creating indexes on {0}.{1}</value>
+  </data>
+  <data name="CopyingCollections_Title" xml:space="preserve">
+    <value>Copying {0} collection(s)...</value>
+  </data>
+  <data name="CopyingCollections_InvalidName" xml:space="preserve">
+    <value>{0} is not a valid collection name</value>
+  </data>
+  <data name="CopyingCollections_NotMaster" xml:space="preserve">
+    <value>{0}:{1} is not the primary node</value>
+  </data>
+  <data name="ManageIndexes_Title" xml:space="preserve">
+    <value>Manage Indexes - {0}</value>
+  </data>
+  <data name="MenuItem_ManageIndexes" xml:space="preserve">
+    <value>Manage Indexes...</value>
+  </data>
+  <data name="ManageIndexes_Ascending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="ManageIndexes_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ManageIndexes_Column0Title" xml:space="preserve">
+    <value>Document Property</value>
+  </data>
+  <data name="ManageIndexes_Column1Title" xml:space="preserve">
+    <value>Index Type</value>
+  </data>
+  <data name="ManageIndexes_Descending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="ManageIndexes_Geospatial" xml:space="preserve">
+    <value>Geospatial</value>
+  </data>
+  <data name="ManageIndexes_SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="IndexControl_Sparse" xml:space="preserve">
+    <value>Sparse</value>
+  </data>
+  <data name="IndexControl_Unique" xml:space="preserve">
+    <value>Unique</value>
+  </data>
+  <data name="IndexType_Ascending" xml:space="preserve">
+    <value>Ascending</value>
+  </data>
+  <data name="IndexType_AscendingAbbr" xml:space="preserve">
+    <value>[ASC]</value>
+  </data>
+  <data name="IndexType_Descending" xml:space="preserve">
+    <value>Descending</value>
+  </data>
+  <data name="IndexType_DescendingAbbr" xml:space="preserve">
+    <value>[DSC]</value>
+  </data>
+  <data name="IndexType_Geospatial" xml:space="preserve">
+    <value>Geospatial</value>
+  </data>
+  <data name="IndexType_GeospatialAbbr" xml:space="preserve">
+    <value>[GEO]</value>
+  </data>
+  <data name="ManageIndexes_Applying" xml:space="preserve">
+    <value>Applying indexes</value>
+  </data>
+  <data name="ManageIndexes_Creating" xml:space="preserve">
+    <value>Creating index {0}</value>
+  </data>
+  <data name="ManageIndexes_Dropping" xml:space="preserve">
+    <value>Dropping exising indexes</value>
+  </data>
+  <data name="ManageIndexes_Fail" xml:space="preserve">
+    <value>{0} index(es) were not created.{1}</value>
+  </data>
+  <data name="ManageIndexes_GeospatialNotFirst" xml:space="preserve">
+    <value>Index {0} has a geospatial index which was not the first property in the index</value>
+  </data>
+  <data name="ManageIndexes_InvalidGeospatial" xml:space="preserve">
+    <value>Index {0} contains a property not valid for a geospatial index</value>
+  </data>
+  <data name="ManageIndexes_InvalidUnique" xml:space="preserve">
+    <value>Index {0} contains a property with duplicate entries, a unique index could not be created</value>
+  </data>
+  <data name="ManageIndexes_Success" xml:space="preserve">
+    <value>{0} index(es) created</value>
+  </data>
+  <data name="ManageIndexes_UnknownError" xml:space="preserve">
+    <value>An error occurred creating index {0}. {1}</value>
+  </data>
+  <data name="Console_Description" xml:space="preserve">
+    <value>Console {0}:{1}</value>
+  </data>
+  <data name="Console_Title" xml:space="preserve">
+    <value>{0}:{1}</value>
+  </data>
+  <data name="MenuItem_OpenConsole" xml:space="preserve">
+    <value>Open Console</value>
+  </data>
+  <data name="console" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\console.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Console_ErrorOpening" xml:space="preserve">
+    <value>Error opening mongo.exe, the stored path to mongo.exe will be cleared</value>
+  </data>
+  <data name="Console_LocateDesc" xml:space="preserve">
+    <value>Please locate the file mongo.exe\n\n\nYou will only have to do this once, the path will be stored for future use</value>
+  </data>
+  <data name="Console_LocateTitle" xml:space="preserve">
+    <value>mongo.exe path required</value>
+  </data>
+  <data name="Console_WrongFileTitle" xml:space="preserve">
+    <value>mongo.exe path error</value>
+  </data>
+  <data name="Console_WrongFileDesc" xml:space="preserve">
+    <value>This does not appear to a path to mongo.exe\n\n\nYou will be prompted to locate the file again next time you open the console</value>
+  </data>
+  <data name="Console_AltEnterTip" xml:space="preserve">
+    <value>Press Alt + Enter to execute</value>
+  </data>
+  <data name="Console_ClearTip" xml:space="preserve">
+    <value>Type 'clear' to clear the output window</value>
+  </data>
+  <data name="MenuItem_SystemStatus" xml:space="preserve">
+    <value>System Status</value>
+  </data>
+  <data name="server_status" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\server_status.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SystemStatus_Description" xml:space="preserve">
+    <value>System Status {0}:{1}</value>
+  </data>
+  <data name="SystemStatus_Title" xml:space="preserve">
+    <value>{0}:{1}</value>
+  </data>
+  <data name="SystemOverview_Interval" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="SystemOverview_Interval0" xml:space="preserve">
+    <value>0.5 seconds</value>
+  </data>
+  <data name="SystemOverview_Interval1" xml:space="preserve">
+    <value>1 second</value>
+  </data>
+  <data name="SystemOverview_Interval2" xml:space="preserve">
+    <value>10 seconds</value>
+  </data>
+  <data name="SystemOverview_Interval3" xml:space="preserve">
+    <value>30 seconds</value>
+  </data>
+  <data name="SystemOverview_Interval4" xml:space="preserve">
+    <value>1 minute</value>
+  </data>
+  <data name="SystemOverview_Span" xml:space="preserve">
+    <value>Span</value>
+  </data>
+  <data name="SystemOverview_Span0" xml:space="preserve">
+    <value>1 minute</value>
+  </data>
+  <data name="SystemOverview_Span1" xml:space="preserve">
+    <value>10 minutes</value>
+  </data>
+  <data name="SystemOverview_Span2" xml:space="preserve">
+    <value>30 minutes</value>
+  </data>
+  <data name="SystemOverview_Span3" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+  <data name="SystemOverview_Connections" xml:space="preserve">
+    <value>Connections</value>
+  </data>
+  <data name="SystemOverview_MemoryTitle" xml:space="preserve">
+    <value>Virtual Memory</value>
+  </data>
+  <data name="SystemOverview_NetworkIn" xml:space="preserve">
+    <value>Network In</value>
+  </data>
+  <data name="SystemOverview_NetworkOut" xml:space="preserve">
+    <value>Network Out</value>
+  </data>
+  <data name="ServerStatus_Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="ServerStatus_LockDesc" xml:space="preserve">
+    <value>{0} {1} Lock Time</value>
+  </data>
+  <data name="ServerStatus_Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="ServerStatus_Write" xml:space="preserve">
+    <value>Write</value>
+  </data>
+  <data name="SystemOverview_TotalOps" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="DeleteColsDBs_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DeleteColsDBs_DeleteButton" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteColsDBs_Title" xml:space="preserve">
+    <value>Delete Databases/Collections</value>
+  </data>
+  <data name="MenuItem_DeleteColllectionsDBs" xml:space="preserve">
+    <value>Delete databases/collections...</value>
+  </data>
+</root>

@@ -1,0 +1,73 @@
+﻿@using OCP.Models
+@model PurchaseModel
+<div class="main_content">
+    <div class="content_block">
+        <div class="content_left">
+            <h1>Hub Pricing</h1>
+            <p>
+                A single-user licence costs £50 and entitles you to all future upgrades of Hub for MongoDB.
+            </p>
+            <p>
+                £50 is currently approximately*:
+            </p>
+            <ul>
+                <li>@Model.ExchangeRates.Usd</li>
+                <li>@Model.ExchangeRates.Eur</li>
+                <li>@Model.ExchangeRates.Cad</li>
+                <li>@Model.ExchangeRates.Aud</li>
+            </ul>
+            <p>
+                Buy 5 or more licences and receive a 5% discount, buy 10 or more and get 10% off.
+            </p>
+            <p>
+                * Source: European Central Bank. (@Model.ExchangeRates.Date)
+            </p>
+        </div>
+        <div class="content_right">
+            <form method="post" action="/purchase/validate">
+                <h1>Purchase</h1>
+                <p @Html.Raw(Model.InvalidEmail ? " class=\"field_error\"" : "")>
+                    Your email address:
+                </p>
+                <p>
+                    <input type="email" name="email" value="@Model.Email" maxlength="320" />
+                </p>
+                <p>
+                    <div class="field_left@(Model.InvalidQuantity ? " field_error" : "")">Number of Licences:</div>
+                    <div class="field_right">
+                        <input type="number" name="copies" id="copies" class="small_input" value="@Model.Quantity" onchange="quantityChanged();" />
+                    </div>
+                    <div style="clear: both;"></div>
+                </p>
+                <p id="totalp" style="display: none;">
+                    <div class="field_left">Price:</div>
+                    <div class="field_right" id="totalcost"></div>
+                    <div style="clear: both;"></div>
+                </p>
+                <input type="submit" class="download_button" value="Purchase with PayPal" />
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.getElementById('totalcost').innerHTML = '£50';
+    document.getElementById('totalp').style.display = '';
+    function quantityChanged() {
+        var qty = parseInt(document.getElementById('copies').value);
+        if (isNaN(qty) || qty < 0) {
+            document.getElementById('totalcost').innerHTML = '-';
+        }
+        else {
+            var cost = 0;
+            if (qty < 5) {
+                cost = qty * 50;
+            } else if (qty < 10) {
+                cost = qty * 47.50;
+            } else {
+                cost = qty * 45;
+            }
+            document.getElementById('totalcost').innerHTML = '£' + cost.toFixed(2);
+        }
+    }
+    quantityChanged();
+</script>

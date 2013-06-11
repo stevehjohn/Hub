@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Connections_PanelTitle" xml:space="preserve">
+    <value>Connections</value>
+  </data>
+  <data name="Connect_Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Connect_Title" xml:space="preserve">
+    <value>Connect to Service</value>
+  </data>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Hub</value>
+  </data>
+  <data name="Menu_File" xml:space="preserve">
+    <value>_File</value>
+  </data>
+  <data name="Menu_File_Connect" xml:space="preserve">
+    <value>_Connect...</value>
+  </data>
+  <data name="Menu_File_Exit" xml:space="preserve">
+    <value>E_xit</value>
+  </data>
+  <data name="Connect_Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="Connect_Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="Connect_AddButton" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Connect_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Connect_TestButton" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Validator_Port_Error" xml:space="preserve">
+    <value>Port must be an integer value between 0 and 65535 inclusive</value>
+  </data>
+  <data name="Validator_Host_Error" xml:space="preserve">
+    <value>A host name or IP address is required</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="server_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\server_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ToolBar_Connect" xml:space="preserve">
+    <value>Connect...</value>
+  </data>
+  <data name="Progress_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Progress_Testing" xml:space="preserve">
+    <value>Testing Connection...</value>
+  </data>
+  <data name="Connect_Progress_Testing" xml:space="preserve">
+    <value>Testing...</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="server_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\server_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Connect_Error_Duplicate" xml:space="preserve">
+    <value>A connection to {0} for {1} already exists</value>
+  </data>
+  <data name="Connect_Error_Title" xml:space="preserve">
+    <value>Error Adding Connection</value>
+  </data>
+  <data name="MessageBox_DefaultButton" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="MessageBox_NoButton" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="MessageBox_YesButton" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Connect_Confirm_Delete_Message" xml:space="preserve">
+    <value>Are you sure you want to delete the connection {0} for {1}?</value>
+  </data>
+  <data name="MessageBox_Confirm_DefaultTitle" xml:space="preserve">
+    <value>Confirm Action</value>
+  </data>
+  <data name="Status_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="TreeView_NoData" xml:space="preserve">
+    <value>No data</value>
+  </data>
+  <data name="TreeView_Disconnect" xml:space="preserve">
+    <value>Disconnect</value>
+  </data>
+  <data name="Menu_File_Disconnect" xml:space="preserve">
+    <value>_Disconnect</value>
+  </data>
+  <data name="export" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="import" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\import.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_File_Export" xml:space="preserve">
+    <value>_Export Connections...</value>
+  </data>
+  <data name="Menu_File_Import" xml:space="preserve">
+    <value>_Import Connections...</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TreeView_Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="Export_DefaultExtension" xml:space="preserve">
+    <value>.json</value>
+  </data>
+  <data name="Export_DefaultFileName" xml:space="preserve">
+    <value>Connections</value>
+  </data>
+  <data name="Export_Error" xml:space="preserve">
+    <value>An error occurred writing the connections file</value>
+  </data>
+  <data name="Export_Filter" xml:space="preserve">
+    <value>Json Files|*.json</value>
+  </data>
+  <data name="Export_Success" xml:space="preserve">
+    <value>Connections Exported</value>
+  </data>
+  <data name="Import_Error" xml:space="preserve">
+    <value>An error occurred reading the connections file</value>
+  </data>
+  <data name="Import_Success" xml:space="preserve">
+    <value>Connections Imported</value>
+  </data>
+  <data name="Export_SaveTitle" xml:space="preserve">
+    <value>Export Connections</value>
+  </data>
+  <data name="Import_OpenTitle" xml:space="preserve">
+    <value>Import Connections</value>
+  </data>
+  <data name="Connect_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Connect_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Menu_Help" xml:space="preserve">
+    <value>_Help</value>
+  </data>
+  <data name="Menu_Help_About" xml:space="preserve">
+    <value>_About</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>About Hub</value>
+  </data>
+  <data name="About_Component" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="About_Copyright" xml:space="preserve">
+    <value>Copyright ©2012 Steve John</value>
+  </data>
+  <data name="About_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="About_WebsiteLink" xml:space="preserve">
+    <value>http://stevejohn.me</value>
+  </data>
+  <data name="App_Title" xml:space="preserve">
+    <value>Hub</value>
+  </data>
+  <data name="Help_InterfacesName" xml:space="preserve">
+    <value>Hub Plugin Interfaces</value>
+  </data>
+  <data name="Upgraded_Title" xml:space="preserve">
+    <value>Hub Upgraded</value>
+  </data>
+  <data name="About_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Upgraded_Label" xml:space="preserve">
+    <value>Hub has been updated to a new version.</value>
+  </data>
+  <data name="Upgraded_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Versions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Versions.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Operations_PanelTitle" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="Connect_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Help_ControlsName" xml:space="preserve">
+    <value>Hub Controls</value>
+  </data>
+  <data name="LicenceEntry_PurchaseLink" xml:space="preserve">
+    <value>http://outsidecontextproblem.com/purchase</value>
+  </data>
+  <data name="LicenceEntry_PurchaseLinkText" xml:space="preserve">
+    <value>outsidecontextproblem.com/purchase</value>
+  </data>
+  <data name="LicenceEntry_PurchaseText" xml:space="preserve">
+    <value>You can purchase a licence here:</value>
+  </data>
+  <data name="LicenceEntry_SorryExpired" xml:space="preserve">
+    <value>Sorry, but your Hub trial period has expired.</value>
+  </data>
+  <data name="LicenceEntry_Title" xml:space="preserve">
+    <value>Trial Period Expired</value>
+  </data>
+  <data name="LicenceEntry_ActivateOffline" xml:space="preserve">
+    <value>Activate Offline</value>
+  </data>
+  <data name="LicenceEntry_ActivateOnline" xml:space="preserve">
+    <value>Activate Online</value>
+  </data>
+  <data name="LicenceEntry_HowToActivate" xml:space="preserve">
+    <value>If you have purchased a licence, you can enter your email address below and activate online.</value>
+  </data>
+  <data name="LicenceEntry_NoInternet" xml:space="preserve">
+    <value>If this machine does not have general internet access, enter your email address above and licence code below to activate.</value>
+  </data>
+</root>

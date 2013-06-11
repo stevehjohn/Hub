@@ -1,0 +1,55 @@
+﻿@model OCP.Models.TourModel
+<div style="width: 100%; top: 100px; position: absolute;">
+    <img class="tour_img" src="@string.Format("/content/img/tour_{0}.png", Model.PageNo)" style="margin-left: auto; margin-right: auto; display: block;" />
+    <div class="main_content">
+        <div class="content_block">
+            <div class="content_left">
+                @switch (Model.PageNo)
+                {
+                    case 1:
+                        <span>
+                            Manage connections to all your MongoDB instances or clusters and easily drill down into databases, collections and even the collection document structure.
+                        </span>
+                        break;
+                    case 2:
+                        <span>
+                            View and edit data within your collections. Powerful and simple to use filtering and sorting of collection data.
+                        </span>
+                        break;
+                    case 3:
+                        <span>
+                            View, edit and remove collection indexes with a simple, intuitive interface.
+                        </span>
+                        break;
+                    case 4:
+                        <span>
+                            Keep a watch of MongoDB's log output and adjust its verbosity.
+                        </span>
+                        break;
+                    case 5:
+                        <span>
+                            Copy one or many collections and/or databases between servers with a few clicks.
+                        </span>
+                        break;
+                    case 6:
+                        <span>
+                            Easily edit and execute multiple statement console commands.
+                        </span>
+                        break;
+                    case 7:
+                        <span>
+                            Monitor key performance indicators - watch the effect of queries and other operations on your MongoDB instances.
+                        </span>
+                        break;
+                }
+            </div>
+            <div class="content_right">
+                <a href="@string.Format("/tour/page/{0}", Model.PageNo + 1)">
+                    <div class="download_button">
+                        Next
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

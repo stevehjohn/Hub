@@ -1,0 +1,103 @@
+--- 0.3.0.2 ---
+
+- Mongo DB Plugin
+  - Changed system overview virtual memory chart to the more useful virtual memory
+
+--- 0.3.0.1 ---
+
+- Mongo DB Plugin
+  - Added a system overview page
+
+--- 0.3.0.0 ---
+
+- Can specify a friendly name for connections
+- Mongo DB Plugin
+  - Replaced Evaluate JavaScript window with a more useful mongo shell wrapper
+
+--- 0.2.0.11 ---
+
+- Mongo DB Plugin
+  - Obtaining replica set status now done with EvalFlags.NoLock
+  - Fixed errant Copy Collections window sizing behaviour
+  - Added facility to manage indexes
+
+--- 0.2.0.10 ---
+
+- Mongo DB Plugin
+  - Copy collections now creates indexes
+
+--- 0.2.0.9 ---
+
+- Mongo DB Plugin
+  - Fixed exception preventing sorting/filtering when a document property (of type document) is null
+  - Can copy databases and collections between servers (still sans indexes)
+
+--- 0.2.0.8 ---
+
+- F5 refreshes selected treeview node
+- Mongo DB Plugin
+  - Can delete documents
+  - Added a log watcher (can set Mongo's log verbosity via this screen)
+  - F5 refreshes collection view
+  - F5 evaluates JavaScript
+
+--- 0.2.0.7 ---
+
+- Added infrastructure to enable/disable menus from within tab documents
+- Mongo DB Plugin
+  - Fixed crash which occurred when analysing collection for properties to filter and sort by
+
+--- 0.2.0.6 ---
+
+- Mongo DB Plugin
+  - Pressing ctrl+c on a root connection, replica set member or database treeview node copies the connection string to the clipboard
+  - Improved error handling and added basic logging
+
+--- 0.2.0.5 ---
+
+- Tabs now have tooltip to display more information about the view
+- Mongo DB Plugin
+  - Can create collections
+  - Can create databases
+  - Improved collection view's sort and filter field detection
+  - Collection view filters added: in, not in
+  - Added basic evaluate JavaScript window
+  - Can compact collections
+  - Copies collections (locally, sans indexes for now)
+
+--- 0.2.0.4 ---
+
+- Added panel to display background operation status
+- Mongo DB Plugin:
+  - Detects arbiters within replica sets
+  - Can rename collections
+
+--- 0.2.0.3 ----
+
+- Added version info dialog
+- Treeview supports child nodes overriding the root connection
+- Mongo DB Plugin:
+  - Detects replica sets and adds all members to the treeview
+
+--- 0.2.0.2 ----
+
+- Installer
+- Automatic updating
+- Middle button tab close
+- Interface version listed in help dialog
+- Mongo DB Plugin:
+  - Improved treeview scanning of collection properties (especially arrays)
+
+--- Base version ----
+
+- Ming application with framework to accept plugins
+- Treeview manager querying plugins for data to display
+- Menu manager (and treeview context menu manager) querying plugins for appropriate menus to display or enable
+- Tabbed document controller for plugin UIs
+- Mongo DB plugin:
+  - Test database connections
+  - Query Mongo for databases/collections/indexes/collection properties to pass to treeview
+  - Display paged collection documents in hierarchical listview
+  - Sort listview documents on document properties
+  - Filter listview documents on document properties 
+  - Edit document properties inline in listview

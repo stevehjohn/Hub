@@ -1,0 +1,51 @@
+﻿@using OCP.Models
+@model ContactUsModel
+<div class="main_content">
+    <div class="content_block">
+        <div class="content_left">
+            <h1>Contact Us</h1>
+            <p>
+                We're always looking to improve our product so appreciate any feedback you can provide.
+            </p>
+            <p>
+                Hub for MongoDB is under active development with a rapid turnaround in new features.
+                Please let us know if there is anything you would like to see in Hub.
+            </p>
+        </div>
+        <div class="content_right">
+            <form method="post" action="/contact/validate">
+                <h1>Feedback</h1>
+                @if (Model.Sent)
+                {
+                    <p>Thank you. Your message has been sent.</p>
+                }
+                else
+                {
+                    <p @Html.Raw(Model.InvalidEmail ? " class=\"field_error\"" : "")>
+                        Your email address:
+                    </p>
+                    <p>
+                        <input type="email" name="email" value="@Model.Email" maxlength="320" />
+                    </p>
+                    <p>
+                        Feedback type:
+                    </p>
+                    <p>
+                        <select name="messagetype">
+                            <option@(Model.MessageType == "Feature Request" ? " selected=\"selected\"" : "")>Feature Request</option>
+                            <option@(Model.MessageType == "Bug Report" ? " selected=\"selected\"" : "")>Bug Report</option>
+                            <option@(Model.MessageType == "Other" ? " selected=\"selected\"" : "")>Other</option>
+                        </select>
+                    </p>
+                    <p @Html.Raw(Model.InvalidMessage ? " class=\"field_error\"" : "")>
+                        Your message:
+                    </p>
+                    <p>
+                        <textarea name="message" rows="5">@Model.Message</textarea>
+                    </p>
+                    <input type="submit" class="download_button" value="Send Feedback" />
+                }
+            </form>
+        </div>
+    </div>
+</div>

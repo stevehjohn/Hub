@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="MingMongoPlugin.Controls.IndexControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:MingMongoPlugin.Properties"
+             Height="Auto" Width="Auto"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="PropertyButton">
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="FontFamily" Value="Marlett" />
+            <Setter Property="FontWeight" Value="ExtraLight" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="#1d1d1d" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Name="ButtonGrid" Background="#cccedb">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3,0,3,0" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#52b0ef" TargetName="ButtonGrid" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Border BorderThickness="0,1,0,0" BorderBrush="#cccedb">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <CheckBox Name="Unique" VerticalAlignment="Center" IsChecked="{Binding IsUnique}"></CheckBox>
+                <Label Target="{Binding ElementName=Unique}">
+                    <TextBlock Text="{x:Static resx:Resources.IndexControl_Unique}" />
+                </Label>
+                <CheckBox Name="Sparse" VerticalAlignment="Center" IsChecked="{Binding IsSparse}"></CheckBox>
+                <Label Target="{Binding ElementName=Sparse}">
+                    <TextBlock Text="{x:Static resx:Resources.IndexControl_Sparse}" />
+                </Label>
+            </StackPanel>
+            <Grid Grid.Row="1" Height="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ListView AllowDrop="True" Grid.Column="0" MinHeight="30" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Height="Auto" Name="PropertyList" ItemsSource="{Binding IndexedProperties}" BorderThickness="0" Background="Transparent" Margin="0,0,0,7" Drop="PropertyListDrop">
+                    <ListView.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="#1d1d1d" />
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter />
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,3,5,0" Name="PropertyGrid">
+                                <Grid.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="{x:Static resx:Resources.IndexType_Ascending}" Click="IndexTypeAscClicked" />
+                                        <MenuItem Header="{x:Static resx:Resources.IndexType_Descending}" Click="IndexTypeDescClicked" />
+                                        <MenuItem Header="{x:Static resx:Resources.IndexType_Geospatial}" Click="IndexTypeGeoClicked" />
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock SnapsToDevicePixels="True" Grid.Column="0" Text="{Binding PropertyName}" Margin="0" Padding="5,3,5,3" Background="#cccedb" />
+                                <TextBlock SnapsToDevicePixels="True" Grid.Column="1" Text="{Binding IndexTypeDesc}" VerticalAlignment="Stretch" Background="#cccedb" Padding="5,3,5,3" MouseUp="ShowContextMenu" Name="IndexTypeButton" Tag="{Binding PropertyName}" />
+                                <Button Name="PropertyRemoveButton" Click="PropertyRemoveButtonClick" SnapsToDevicePixels="True" Grid.Column="2" FontFamily="Marlett" Content="r" Style="{StaticResource PropertyButton}" Visibility="Hidden" Tag="{Binding PropertyName}" />
+                            </Grid>
+                            <DataTemplate.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsMouseOver" Value="True" SourceName="PropertyGrid" />
+                                    </MultiTrigger.Conditions>
+                                    <MultiTrigger.Setters>
+                                        <Setter TargetName="PropertyRemoveButton" Property="Visibility" Value="Visible" />
+                                    </MultiTrigger.Setters>
+                                </MultiTrigger>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="IsMouseOver" Value="True" SourceName="IndexTypeButton" />
+                                    </MultiTrigger.Conditions>
+                                    <MultiTrigger.Setters>
+                                        <Setter TargetName="IndexTypeButton" Property="Background" Value="#52b0ef" />
+                                    </MultiTrigger.Setters>
+                                </MultiTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
